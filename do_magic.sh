@@ -7,11 +7,11 @@
 
 sudo apt update -y
 
-mkdir ~/data
+mkdir ~/data >/dev/null 2>&1
 
 docker run -e \
   JAVA_TOOL_OPTIONS="-Xms20g -Xmx20g -XX:OnOutOfMemoryError=\"kill -9 %p\"" \
-  -v "~/data":/data \
+  -v "$(pwd)/data":/data \
   ghcr.io/onthegomap/planetiler:latest \
   --area=europe \
   --bounds=planet \
