@@ -1,11 +1,17 @@
 # Planetiler Scripts
 
-Scripts for building Vector tiles using https://github.com/onthegomap/planetiler.
+Scripts for building Europe vector tiles using https://github.com/onthegomap/planetiler.
+Tiles without any details will be also generated for whole planet (extra ~25GB).
 
 ## Running
 
 ```bash
-bash ./do_magic.sh
+mkdir ./src
+cd src
+git clone https://github.com/velomapa/planetiler-scripts.git
+cd ~
+
+bash ./src/planetiler-scripts/do_magic.sh
 ```
 
 ## Planetiler Options
