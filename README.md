@@ -1,18 +1,22 @@
-# Planetiler Scripts
+# Velomapa vector tiles
+
+Scripts and instructions for generating (planetiler) vector tiles and running tile server (tileserver-gl).
+Velomap vector style is based on [OSM-liberty](https://github.com/maputnik/osm-liberty).
+
+## Genereting Tiles
 
 Scripts for building Europe vector tiles using https://github.com/onthegomap/planetiler.
 Tiles without any details will be also generated for whole planet (extra ~25GB).
 
-## Genereting Tiles
 ### Running
 
 ```bash
 mkdir ./src
 cd src
-git clone https://github.com/velomapa/planetiler-scripts.git
+git clone git@github.com:velomapa/vector-tiles.git
 cd ~
 
-bash ./src/planetiler-scripts/do_magic.sh
+bash ./src/vector-tiles/generate_tiles.sh
 ```
 
 ### Planetiler Options
