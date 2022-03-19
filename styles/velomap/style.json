@@ -1557,12 +1557,12 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
-      "maxzoom": 6,
+      "maxzoom": 5,
       "filter": ["all", ["==", "class", "state"]],
       "layout": {
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
-        "text-size": {"stops": [[4, 10], [4, 11]]},
+        "text-size": {"stops": [[4, 9], [4, 9]]},
         "text-transform": "uppercase"
       },
       "paint": {
