@@ -16,6 +16,6 @@ docker run -e \
   --area=europe \
   --bounds=planet \
   --download  \
-  --nodemap-type=sparsearray \
+  --nodemap-type=sortedtable \
   --nodemap-storage=mmap \
   --force 2>&1 | tee logs.txt &
