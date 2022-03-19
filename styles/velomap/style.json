@@ -1557,6 +1557,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
+      "minzoom": 4,
       "maxzoom": 8,
       "filter": ["all", ["==", "class", "state"]],
       "layout": {
