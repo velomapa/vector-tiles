@@ -90,6 +90,19 @@
       }
     },
     {
+      "id": "landcover_farmland",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "filter": [
+        "all",
+        ["==", "class", "farmland"]
+      ],
+      "paint": {
+        "fill-color": "rgba(233,237, 204, 1)"
+      }
+    },
+    {
       "id": "landuse_cemetery",
       "type": "fill",
       "source": "openmaptiles",
