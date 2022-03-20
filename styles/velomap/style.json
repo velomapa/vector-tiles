@@ -27,16 +27,6 @@
       }
     },
     {
-      "id": "park_outline",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "park",
-      "paint": {
-        "line-dasharray": [1, 1.5],
-        "line-color": "rgba(228, 241, 215, 1)"
-      }
-    },
-    {
       "id": "landuse_residential",
       "type": "fill",
       "source": "openmaptiles",
@@ -100,6 +90,16 @@
       ],
       "paint": {
         "fill-color": "rgba(233,237, 204, 1)"
+      }
+    },
+    {
+      "id": "park_outline",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "park",
+      "paint": {
+        "line-dasharray": [1, 1.5],
+        "line-color": "rgba(95, 208, 100, 1)"
       }
     },
     {
@@ -1431,26 +1431,6 @@
       }
     },
     {
-      "id": "road_label",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "transportation_name",
-      "filter": ["all"],
-      "layout": {
-        "symbol-placement": "line",
-        "text-anchor": "center",
-        "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name"]],
-        "text-font": ["Roboto Regular"],
-        "text-offset": [0, 0.15],
-        "text-size": {"base": 1, "stops": [[13, 12], [14, 13]]}
-      },
-      "paint": {
-        "text-color": "#765",
-        "text-halo-blur": 0.5,
-        "text-halo-width": 1
-      }
-    },
-    {
       "id": "road_shield",
       "type": "symbol",
       "source": "openmaptiles",
@@ -1618,7 +1598,7 @@
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
         "text-max-width": 6.25,
-        "text-size": {"stops": [[1, 8], [4, 14]]},
+        "text-size": {"stops": [[2, 8], [5, 14]]},
         "text-transform": "none"
       },
       "paint": {
