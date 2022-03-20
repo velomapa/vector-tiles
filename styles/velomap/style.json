@@ -1553,26 +1553,6 @@
       }
     },
     {
-      "id": "state",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "place",
-      "minzoom": 4,
-      "maxzoom": 8,
-      "filter": ["all", ["==", "class", "state"]],
-      "layout": {
-        "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
-        "text-font": ["Roboto Condensed Italic"],
-        "text-size": ["literal", 10],
-        "text-transform": "uppercase"
-      },
-      "paint": {
-        "text-color": "#633",
-        "text-halo-color": "rgba(255,255,255,0.7)",
-        "text-halo-width": 1
-      }
-    },
-    {
       "id": "country_3",
       "type": "symbol",
       "source": "openmaptiles",
@@ -1582,7 +1562,7 @@
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
         "text-max-width": 6.25,
-        "text-size": {"stops": [[3, 11], [7, 17]]},
+        "text-size": {"stops": [[3, 9], [7, 14]]},
         "text-transform": "none"
       },
       "paint": {
@@ -1602,7 +1582,7 @@
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
         "text-max-width": 6.25,
-        "text-size": {"stops": [[2, 11], [5, 17]]},
+        "text-size": {"stops": [[2, 9], [5, 14]]},
         "text-transform": "none"
       },
       "paint": {
@@ -1622,7 +1602,7 @@
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
         "text-max-width": 6.25,
-        "text-size": {"stops": [[1, 11], [4, 17]]},
+        "text-size": {"stops": [[1, 9], [4, 14]]},
         "text-transform": "none"
       },
       "paint": {
@@ -1642,7 +1622,7 @@
       "layout": {
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
-        "text-size": 13,
+        "text-size": 12,
         "text-transform": "uppercase",
         "text-justify": "center"
       },
