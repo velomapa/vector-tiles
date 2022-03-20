@@ -1571,11 +1571,12 @@
       "source": "openmaptiles",
       "source-layer": "place",
       "filter": ["all", [">=", "rank", 3], ["==", "class", "country"]],
+      "maxzoom": 5,
       "layout": {
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
         "text-max-width": 6.25,
-        "text-size": {"stops": [[3, 9], [7, 14]]},
+        "text-size": {"stops": [[3, 8], [7, 14]]},
         "text-transform": "none"
       },
       "paint": {
@@ -1591,11 +1592,12 @@
       "source": "openmaptiles",
       "source-layer": "place",
       "filter": ["all", ["==", "rank", 2], ["==", "class", "country"]],
+      "maxzoom": 5,
       "layout": {
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
         "text-max-width": 6.25,
-        "text-size": {"stops": [[2, 9], [5, 14]]},
+        "text-size": {"stops": [[2, 8], [5, 14]]},
         "text-transform": "none"
       },
       "paint": {
@@ -1611,11 +1613,12 @@
       "source": "openmaptiles",
       "source-layer": "place",
       "filter": ["all", ["==", "rank", 1], ["==", "class", "country"]],
+      "maxzoom": 5,
       "layout": {
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Condensed Italic"],
         "text-max-width": 6.25,
-        "text-size": {"stops": [[1, 9], [4, 14]]},
+        "text-size": {"stops": [[1, 8], [4, 14]]},
         "text-transform": "none"
       },
       "paint": {
