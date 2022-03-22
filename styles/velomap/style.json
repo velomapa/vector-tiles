@@ -97,6 +97,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "park",
+      "minzoom": 8,
       "paint": {
         "line-dasharray": [1, 1.5],
         "line-color": "rgba(95, 208, 100, 1)"
