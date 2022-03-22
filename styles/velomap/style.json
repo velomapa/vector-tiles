@@ -1293,7 +1293,7 @@
       }
     },
     {
-      "id": "water_name_line",
+      "id": "waterway_name_line",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "waterway",
@@ -1302,7 +1302,9 @@
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name"]],
         "text-font": ["Roboto Regular"],
         "text-max-width": 5,
-        "text-size": 12,
+        "text-size": {
+          "stops": [[10, 12], [12, 14]]
+        },
         "symbol-placement": "line"
       },
       "paint": {
@@ -1321,13 +1323,38 @@
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name"]],
         "text-font": ["Roboto Regular"],
         "text-max-width": 5,
-        "text-size": 12
+        "text-size": {
+          "stops": [[10, 12], [12, 14]]
+        }
       },
       "paint": {
         "text-color": "#5d60be",
         "text-halo-color": "rgba(255,255,255,0.7)",
         "text-halo-width": 1
       }
+    },
+    {
+      "id": "water_name_line",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "filter": ["all", ["==", "$type", "LineString"]],
+      "layout": {
+        "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name"]],
+        "text-font": ["Roboto Regular"],
+        "text-max-width": 5,
+        "text-size": {
+          "stops": [[10, 12], [12, 14]]
+        },
+        "symbol-placement": "line-center",
+        "visibility": "visible"
+      },
+      "source-layer": "water_name",
+      "paint": {
+        "text-color": "#5d60be",
+        "text-halo-color": "rgba(255,255,255,0.7)",
+        "text-halo-width": 1
+      },
+      "minzoom": 10
     },
     {
       "id": "poi_z16",
@@ -1673,6 +1700,38 @@
         "text-halo-width": 1.5,
         "text-halo-color": "#ffffff"
       }
+    },
+    {
+      "id": "park_label",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "park",
+      "minzoom": 10,
+      "layout": {
+        "text-font": [
+          "Roboto Condensed Italic",
+          "Noto Sans Italic"
+        ],
+        "text-size": {
+          "base": 1.2,
+          "stops": [[10, 12], [12, 14]]
+        },
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "visibility": "visible",
+        "symbol-spacing": 1250,
+        "text-max-width": 9,
+        "text-transform": "none",
+        "symbol-avoid-edges": false,
+        "text-letter-spacing": 0.1
+      },
+      "paint": {
+        "text-color": "rgba(56, 96, 23, 1)",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
+      },
+      "metadata": {},
+      "filter": ["all", ["==", "rank", 1]]
     }
   ],
   "id": "osm-liberty"
