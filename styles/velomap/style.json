@@ -1462,6 +1462,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "place",
+      "minzoom": 12,
       "filter": [
         "all",
         [
@@ -1495,6 +1496,7 @@
       "source": "openmaptiles",
       "source-layer": "place",
       "filter": ["all", ["==", "class", "village"]],
+      "minzoom": 12,
       "layout": {
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Regular"],
