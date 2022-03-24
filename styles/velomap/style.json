@@ -1544,7 +1544,7 @@
         "text-font": ["Roboto Medium"],
         "text-max-width": 8,
         "text-offset": [0, 0],
-        "text-size": {"base": 1.2, "stops": [[7, 14], [11, 24]]},
+        "text-size": {"base": 1.2, "stops": [[7, 14], [11, 20]]},
         "icon-allow-overlap": true,
         "icon-optional": false
       },
