@@ -1481,7 +1481,7 @@
         "text-font": ["Roboto Condensed Italic"],
         "text-letter-spacing": 0.1,
         "text-max-width": 9,
-        "text-size": {"base": 1.2, "stops": [[12, 10], [15, 14]]},
+        "text-size": {"base": 1.2, "stops": [[12, 9], [15, 14]]},
         "text-transform": "uppercase"
       },
       "paint": {
@@ -1501,7 +1501,7 @@
         "text-field": ["case", ["has", "name:pl"], ["get", "name:pl"], ["get", "name_en"]],
         "text-font": ["Roboto Regular"],
         "text-max-width": 8,
-        "text-size": {"base": 1.2, "stops": [[10, 12], [15, 22]]}
+        "text-size": {"base": 1.2, "stops": [[10, 10], [15, 18]]}
       },
       "paint": {
         "text-color": "#333",
