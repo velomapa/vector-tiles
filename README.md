@@ -86,6 +86,18 @@ docker run -d --restart unless-stopped -v "$(pwd)/data":/data -p 127.0.0.1:8080:
 ```
 
 ```nginx
+location ~*  \.(jpg|jpeg|png|webp)$ {
+  proxy_set_header X-Real-IP         $remote_addr;
+  proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Forwarded-Host  $host;
+  proxy_set_header X-Forwarded-Port  $server_port;
+  proxy_set_header Host              $host;
+  add_header Cache-Control "public, max-age=604800";
+
+  proxy_pass http://127.0.0.1:8080;
+}
+
 location / {
   proxy_set_header X-Real-IP         $remote_addr;
   proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
@@ -96,4 +108,10 @@ location / {
 
   proxy_pass http://127.0.0.1:8080;
 }
+```
+
+
+restart nginx
+```
+sudo systemctl restart nginx
 ```
