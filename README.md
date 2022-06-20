@@ -3,6 +3,8 @@
 Scripts and instructions for generating (planetiler) vector tiles and running tile server (tileserver-gl).
 Velomap vector style is based on [OSM-liberty](https://github.com/maputnik/osm-liberty).
 
+Styles can be edited online https://maputnik.github.io/
+
 ## Genereting Tiles
 
 Scripts for building Europe vector tiles using https://github.com/onthegomap/planetiler.
