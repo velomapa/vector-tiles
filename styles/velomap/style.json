@@ -950,7 +950,12 @@
       "source": "openmaptiles",
       "source-layer": "poi",
       "minzoom": 16,
-      "filter": ["all", ["==", "$type", "Point"], [">=", "rank", 20]],
+      "filter": [
+        "all",
+        ["==", "$type", "Point"],
+        [">=", "rank", 20],
+        ["!in", "class", "bus"]
+      ],
       "layout": {
         "icon-image": "{class}_11",
         "text-anchor": "top",
@@ -977,7 +982,8 @@
         "all",
         ["==", "$type", "Point"],
         [">=", "rank", 7],
-        ["<", "rank", 20]
+        ["<", "rank", 20],
+        ["!in", "class", "bus"]
       ],
       "layout": {
         "icon-image": "{class}_11",
@@ -1005,7 +1011,8 @@
         "all",
         ["==", "$type", "Point"],
         [">=", "rank", 1],
-        ["<", "rank", 7]
+        ["<", "rank", 7],
+        ["!in", "class", "bus"]
       ],
       "layout": {
         "icon-image": "{class}_11",
