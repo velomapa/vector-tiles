@@ -1028,7 +1028,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "poi",
-      "filter": ["all", ["in", "class", "bus", "rail", "airport"]],
+      "filter": ["all", ["in", "class", "rail", "airport"]],
       "layout": {
         "icon-image": "{class}_11",
         "text-anchor": "left",
