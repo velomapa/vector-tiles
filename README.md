@@ -87,14 +87,40 @@ sudo certbot renew --dry-run
 docker run -d --restart unless-stopped -v "$(pwd)/data":/data -p 127.0.0.1:8080:8080 maptiler/tileserver-gl -p 8080
 ```
 
+Nginx config for setting up reverse proxy.
+
+```bash
+ sudo vim /etc/nginx/sites-enabled/default
+```
+
 ```nginx
 location ~*  \.(jpg|jpeg|png|webp)$ {
+  set $unknown_domain 1;
+
+  if ($http_referer ~* "velomapa.pl") {
+    set $unknown_domain 0;
+  }
+
+  if ($http_referer ~* "myveloway.com") {
+    set $unknown_domain 0;
+  }
+
+  if ($http_referer ~* "localhost") {
+    set $unknown_domain 0;
+  }
+
+  if ($unknown_domain) {
+    add_header Cache-Control 'no-store, no-cache';
+    return 404;
+  }
+
   proxy_set_header X-Real-IP         $remote_addr;
   proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
   proxy_set_header X-Forwarded-Proto $scheme;
   proxy_set_header X-Forwarded-Host  $host;
   proxy_set_header X-Forwarded-Port  $server_port;
   proxy_set_header Host              $host;
+  # 604800=7 days
   add_header Cache-Control "public, max-age=604800";
 
   proxy_pass http://127.0.0.1:8080;
@@ -117,6 +143,44 @@ restart nginx
 ```
 sudo systemctl restart nginx
 ```
+
+## Nginx content caching
+
+```bash
+mkdir -p /data/nginx/cache
+```
+
+
+```
+sudo vim /etc/nginx/nginx.conf
+```
+
+```
+http {
+    # ...
+
+    proxy_cache_path /data/nginx/cache keys_zone=tilecache:10m;
+    proxy_cache_valid 200 302 60m;
+}
+```
+
+```bash
+ sudo vim /etc/nginx/sites-enabled/default
+```
+
+```nginx
+location ~*  \.(jpg|jpeg|png|webp)$ {
+  proxy_cache tilecache;
+
+  # ...
+}
+```
+
+restart nginx
+```
+sudo systemctl restart nginx
+```
+
 
 ## Deplyoment
 
