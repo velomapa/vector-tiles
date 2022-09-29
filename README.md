@@ -187,6 +187,6 @@ sudo systemctl restart nginx
 First push all changes to remote repo.
 
 ```bash
-cd xxx@xxxx
+ssh xxx@xxxx
 bash ./src/vector-tiles/pull_and_restart_server.sh
 ```
