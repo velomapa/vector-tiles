@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Velomapa",
+  "name": "Velomapa Grey",
   "sources": {
     "openmaptiles": {
       "type": "vector",
@@ -16,40 +16,13 @@
       "paint": {"background-color": "rgba(241, 241, 240, 1)"}
     },
     {
-      "id": "park",
-      "type": "fill",
-      "source": "openmaptiles",
-      "source-layer": "park",
-      "paint": {
-        "fill-color": "rgba(233, 234, 232, 1)",
-        "fill-opacity": 0.7
-      }
-    },
-    {
-      "id": "landuse_residential",
-      "type": "fill",
-      "source": "openmaptiles",
-      "source-layer": "landuse",
-      "maxzoom": 8,
-      "filter": ["==", "class", "residential"],
-      "paint": {
-        "fill-color": {
-          "base": 1,
-          "stops": [
-            [9, "hsla(0, 3%, 85%, 0.84)"],
-            [12, "hsla(35, 57%, 88%, 0.49)"]
-          ]
-        }
-      }
-    },
-    {
       "id": "waterway_tunnel",
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "waterway",
       "filter": ["all", ["==", "brunnel", "tunnel"]],
       "paint": {
-        "line-color": "#a0c8f0",
+        "line-color": "rgba(190, 200, 201, 1)",
         "line-dasharray": [3, 3],
         "line-gap-width": {"stops": [[12, 0], [20, 6]]},
         "line-opacity": 1,
@@ -94,7 +67,7 @@
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": ["all", ["==", "class", "sand"]],
-      "paint": {"fill-color": "rgba(247, 239, 195, 1)"}
+      "paint": {"fill-color": "rgba(241, 241, 240, 1)"}
     },
     {
       "id": "aeroway_fill",
@@ -245,7 +218,7 @@
       ],
       "layout": {"line-join": "round"},
       "paint": {
-        "line-color": "#fff4c6",
+        "line-color": "rgb(215, 219, 220)",
         "line-width": {"base": 1.2, "stops": [[5, 0], [7, 1], [20, 18]]}
       }
     },
@@ -262,7 +235,7 @@
       ],
       "layout": {"line-join": "round"},
       "paint": {
-        "line-color": "#ffdaa6",
+        "line-color": "rgb(215, 219, 220)",
         "line-width": {"base": 1.2, "stops": [[5, 0], [7, 1], [20, 18]]}
       }
     },
@@ -812,9 +785,7 @@
         "symbol-placement": "line"
       },
       "paint": {
-        "text-color": "#5d60be",
-        "text-halo-color": "rgba(255,255,255,0.7)",
-        "text-halo-width": 1
+        "text-color": "rgba(106, 114, 117, 1)"
       }
     },
     {
@@ -1058,52 +1029,6 @@
         "text-color": "#633",
         "text-halo-color": "rgba(255,255,255,0.7)",
         "text-halo-width": 1
-      }
-    },
-    {
-      "id": "mountain_peak",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "mountain_peak",
-      "minzoom": 11,
-      "filter": ["all", ["has", "ele"]],
-      "layout": {
-        "text-field": [
-          "step",
-          ["zoom"],
-          "",
-          13,
-          [
-            "concat",
-            [
-              "case",
-              ["has", "name:pl"],
-              ["get", "name:pl"],
-              ["get", "name:latin"]
-            ],
-            "\n",
-            ["get", "ele"],
-            " m"
-          ]
-        ],
-        "text-anchor": "top",
-        "text-offset": [
-          "case",
-          ["has", "name:latin"],
-          ["literal", [0, 0.8]],
-          ["literal", [0, -0.3]]
-        ],
-        "text-font": ["Roboto Regular"],
-        "visibility": "visible",
-        "icon-image": "mountain_11",
-        "icon-size": {"stops": [[11, 0.6], [14, 0.8]]},
-        "text-size": 11
-      },
-      "paint": {
-        "text-color": "rgba(30, 30, 30, 1)",
-        "text-halo-blur": 0.5,
-        "text-halo-width": 1.5,
-        "text-halo-color": "#ffffff"
       }
     },
     {
