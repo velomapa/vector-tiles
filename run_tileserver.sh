@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# Data is stored inside a mounted volume
+# which is symlinked to home dir:
+# ln -s /mnt/HC_Volume_35248888/data mounted-data
+
 docker run -d --restart unless-stopped \
-  -v "$(pwd)/data":/data \
+  -v "$(pwd)/mounted-data":/data \
   -v "$(pwd)/src/vector-tiles/sprites":/app/node_modules/tileserver-gl-styles/sprites \
   -v "$(pwd)/src/vector-tiles/styles/velomap":/app/node_modules/tileserver-gl-styles/styles/velomap \
   -v "$(pwd)/src/vector-tiles/styles/velomap-grey":/app/node_modules/tileserver-gl-styles/styles/velomap-grey \
