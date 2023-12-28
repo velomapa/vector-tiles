@@ -23,19 +23,19 @@ bash ./src/vector-tiles/generate_tiles.sh
 
 ### Planetiler Options
 
-* `--nodemap-storage=mmap` - requires 0.5x of the xxx.osm.pbf input size
-* `--nodemap-storage=ram` - requires 1.5x of the xxx.osm.pbf input size
-* `--bounds=planet` - it will generate tiles without details for whole planet - adds extra ~25GB to the output file
+- `--nodemap-storage=mmap` - requires 0.5x of the xxx.osm.pbf input size
+- `--nodemap-storage=ram` - requires 1.5x of the xxx.osm.pbf input size
+- `--bounds=planet` - it will generate tiles without details for whole planet - adds extra ~25GB to the output file
 
 ### Results
 
-* server `CPX51 16 VCPU; 32 GB RAM; 360 GB SSD`
-* mbtiles	`53GB`
-* time `1h39m38s`
+- server `CPX51 16 VCPU; 32 GB RAM; 360 GB SSD`
+- mbtiles `53GB`
+- time `1h39m38s`
 
 ### Runing tileserver
 
-*NOTE:* this will expose 8008 port outside of the firewall
+_NOTE:_ this will expose 8008 port outside of the firewall
 
 ```bash
 docker run --rm -it -v "$(pwd)/data":/data -p 8080:8080 maptiler/tileserver-gl -p 8080
@@ -43,9 +43,13 @@ docker run --rm -it -v "$(pwd)/data":/data -p 8080:8080 maptiler/tileserver-gl -
 
 ### Moving file between servers
 
-* `nohup` - it will make sure that command will still run after loging out, NOTE: `&` is needed
+- `nohup` - it will make sure that command will still run after loging out, NOTE: `&` is needed
+- https://linux.die.net/man/1/rsync
 
 ```bash
+# Pull: rsync [OPTION...] [USER@]HOST:SRC... [DEST]
+# Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
+
 nohup rsync --progress USER@X.X.X.X:/root/data/output.mbtiles ./data &
 
 tail -f nohup.out
@@ -81,7 +85,7 @@ sudo certbot renew --dry-run
 
 ### Tileserver and reverse proxy
 
-* `-d` detached mode
+- `-d` detached mode
 
 ```bash
 docker run -d --restart unless-stopped -v "$(pwd)/data":/data -p 127.0.0.1:8080:8080 maptiler/tileserver-gl -p 8080
@@ -138,8 +142,8 @@ location / {
 }
 ```
 
-
 restart nginx
+
 ```
 sudo systemctl restart nginx
 ```
@@ -149,7 +153,6 @@ sudo systemctl restart nginx
 ```bash
 mkdir -p /data/nginx/cache
 ```
-
 
 ```
 sudo vim /etc/nginx/nginx.conf
@@ -177,10 +180,10 @@ location ~*  \.(jpg|jpeg|png|webp)$ {
 ```
 
 restart nginx
+
 ```
 sudo systemctl restart nginx
 ```
-
 
 ## Deplyoment
 
@@ -190,3 +193,14 @@ First push all changes to remote repo.
 ssh xxx@xxxx
 bash ./src/vector-tiles/pull_and_restart_server.sh
 ```
+
+## Updating mbtiles
+
+Mbtiles are stored in mounted volume. To start using newly generated mbtiles we can:
+
+- attach new volume - done manually in the Hetzner web panel
+
+- copy new mbtiles to the new volume
+
+- update symlink
+- restart tileserver

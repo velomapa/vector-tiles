@@ -2,7 +2,7 @@
 
 # Data is stored inside a mounted volume
 # which is symlinked to home dir:
-# ln -s /mnt/HC_Volume_35248888/data mounted-data
+# ln -s /mnt/XXXX/data mounted-data
 
 docker run -d --restart unless-stopped \
   -v "$(pwd)/mounted-data":/data \

@@ -12,7 +12,7 @@ mkdir ~/data >/dev/null 2>&1
 docker run -e \
   JAVA_TOOL_OPTIONS="-Xms20g -Xmx20g -XX:OnOutOfMemoryError=\"kill -9 %p\"" \
   -v "$(pwd)/data":/data \
-  ghcr.io/onthegomap/planetiler:latest \
+  openmaptiles/planetiler-openmaptiles:latest \
   --area=europe \
   --bounds=planet \
   --download  \
