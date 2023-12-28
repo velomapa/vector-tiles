@@ -11,4 +11,4 @@ docker run -d --restart unless-stopped \
   -v "$(pwd)/src/vector-tiles/styles/velomap-grey":/app/node_modules/tileserver-gl-styles/styles/velomap-grey \
   -v "$(pwd)/src/vector-tiles/styles/osm-liberty":/app/node_modules/tileserver-gl-styles/styles/osm-liberty \
   -p 127.0.0.1:8080:8080 \
-  maptiler/tileserver-gl:4.7.0 -p 8080
+  maptiler/tileserver-gl:v4.7.0 -p 8080
