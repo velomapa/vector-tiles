@@ -2749,8 +2749,7 @@
               14
             ]
           ]
-        },
-        "text-transform": "uppercase"
+        }
       },
       "paint": {
         "text-color": "#633",

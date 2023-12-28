@@ -198,9 +198,26 @@ bash ./src/vector-tiles/pull_and_restart_server.sh
 
 Mbtiles are stored in mounted volume. To start using newly generated mbtiles we can:
 
-- attach new volume - done manually in the Hetzner web panel
+- attach new volume
 
-- copy new mbtiles to the new volume
+  - done manually in the Hetzner web panel
+
+- fetch new mbtiles to the new volume
+
+  - Torrent file: https://www.techidiots.net/downloads/open-base-map-torrents/mbtiles/mbtiles-vector-openmaptiles-openstreetmap-vector-tiles-generated-by-planetiler
+  - `transmission-cli` for downloading torrents in the console
 
 - update symlink
+
+  - `-f` force option to override existing link
+
+  ```bash
+  ln -sf /mnt/XXXX/data mounted-data
+  ```
+
 - restart tileserver
+
+```bash
+docker stop $(docker ps -a -q --filter ancestor=maptiler/tileserver-gl)
+bash ./run_tileserver.sh
+```
