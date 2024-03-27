@@ -4,7 +4,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "mbtiles://{v3}"
+      "url": "mbtiles://output.mbtiles"
     }
   },
   "sprite": "sprites/osm-liberty",
@@ -3448,7 +3448,7 @@
       "layout": {
         "text-field": "{name}",
         "text-font": [
-          "Roboto Regular"
+          "Noto Sans Regular"
         ],
         "text-max-width": 5,
         "text-size": 12,
@@ -3473,7 +3473,7 @@
       "layout": {
         "text-field": "{name}",
         "text-font": [
-          "Roboto Regular"
+          "Noto Sans Regular"
         ],
         "text-max-width": 5,
         "text-size": 12
@@ -3526,7 +3526,7 @@
         "text-anchor": "top",
         "text-field": "{name}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-max-width": 9,
         "text-offset": [
@@ -3589,7 +3589,7 @@
         "text-anchor": "top",
         "text-field": "{name}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-max-width": 9,
         "text-offset": [
@@ -3652,7 +3652,7 @@
         "text-anchor": "top",
         "text-field": "{name}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-max-width": 9,
         "text-offset": [
@@ -3688,7 +3688,7 @@
         "text-anchor": "left",
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-max-width": 9,
         "text-offset": [
@@ -3717,7 +3717,7 @@
         "text-anchor": "center",
         "text-field": "{name}",
         "text-font": [
-          "Roboto Regular"
+          "Noto Sans Regular"
         ],
         "text-offset": [
           0,
@@ -3776,7 +3776,7 @@
         "symbol-spacing": 500,
         "text-field": "{ref}",
         "text-font": [
-          "Roboto Regular"
+          "Noto Sans Regular"
         ],
         "text-offset": [
           0,
@@ -3808,7 +3808,7 @@
       "layout": {
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-letter-spacing": 0.1,
         "text-max-width": 9,
@@ -3849,7 +3849,7 @@
       "layout": {
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Regular"
+          "Noto Sans Regular"
         ],
         "text-max-width": 8,
         "text-size": {
@@ -3902,7 +3902,7 @@
         "text-anchor": "bottom",
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Regular"
+          "Noto Sans Regular"
         ],
         "text-max-width": 8,
         "text-offset": [
@@ -3960,7 +3960,7 @@
         "text-anchor": "bottom",
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Medium"
+          "Noto Sans Medium"
         ],
         "text-max-width": 8,
         "text-offset": [
@@ -4006,7 +4006,7 @@
       "layout": {
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-size": {
           "stops": [
@@ -4049,7 +4049,7 @@
       "layout": {
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-max-width": 6.25,
         "text-size": {
@@ -4094,7 +4094,7 @@
       "layout": {
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-max-width": 6.25,
         "text-size": {
@@ -4139,7 +4139,7 @@
       "layout": {
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-max-width": 6.25,
         "text-size": {
@@ -4180,7 +4180,7 @@
       "layout": {
         "text-field": "{name_en}",
         "text-font": [
-          "Roboto Condensed Italic"
+          "Noto Sans Italic"
         ],
         "text-size": 13,
         "text-transform": "uppercase",

@@ -1,0 +1,24 @@
+{
+  "options": {
+    "paths": {
+      "fonts": "fonts",
+      "styles": "styles"
+    }
+  },
+  "styles": {
+    "velomap": {
+      "style": "velomap/style.json"
+    },
+    "velomap-grey": {
+      "style": "velomap-grey/style.json"
+    },
+    "osm-liberty": {
+      "style": "osm-liberty/style.json"
+    }
+  },
+  "data": {
+    "default": {
+      "mbtiles": "output.mbtiles"
+    }
+  }
+}
