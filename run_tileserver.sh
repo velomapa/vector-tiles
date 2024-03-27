@@ -6,7 +6,7 @@
 # ln -s /mnt/XXXX/data mbtiles
 
 # -d deattached
-docker run --restart unless-stopped \
+docker run -d --restart unless-stopped \
   -v "$(pwd)/mbtiles":/mbtiles \
   -v "$(pwd)/data":/data \
   -p 127.0.0.1:8080:8080 \

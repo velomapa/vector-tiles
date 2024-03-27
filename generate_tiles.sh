@@ -10,10 +10,11 @@
 mkdir ~/mbtiles >/dev/null 2>&1
 
 docker run -e \
-  JAVA_TOOL_OPTIONS="-Xms10g -Xmx10g -XX:OnOutOfMemoryError=\"kill -9 %p\"" \
+  JAVA_TOOL_OPTIONS="-Xms20g -Xmx20g -XX:OnOutOfMemoryError=\"kill -9 %p\"" \
   -v "$(pwd)/mbtiles":/data \
   openmaptiles/planetiler-openmaptiles:3.14.0 \
-  --area=monaco \
+  --area=europe \
+  --bounds=planet \
   --download  \
   --nodemap-type=sortedtable \
   --nodemap-storage=mmap \
