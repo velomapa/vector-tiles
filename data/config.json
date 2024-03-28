@@ -2,8 +2,7 @@
   "options": {
     "paths": {
       "fonts": "fonts",
-      "styles": "styles",
-      "mbtiles": "mbtiles"
+      "styles": "styles"
     }
   },
   "styles": {

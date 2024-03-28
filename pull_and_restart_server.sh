@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# TODO(kacper): make sure that the script is run from the root of the repository
 cd src/vector-tiles
 git pull
 cd ../..
