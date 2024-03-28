@@ -3,7 +3,7 @@
     "paths": {
       "fonts": "fonts",
       "styles": "styles",
-      "mbtiles": "data"
+      "mbtiles": "mbtiles"
     }
   },
   "styles": {
