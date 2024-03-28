@@ -19,3 +19,5 @@ docker run -e \
   --nodemap-type=sortedtable \
   --nodemap-storage=mmap \
   --force 2>&1 | tee logs.txt &
+
+mv ~/mbtiles/output.mbtiles ~/data/output.mbtiles
