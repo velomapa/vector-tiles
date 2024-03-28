@@ -9,7 +9,12 @@
 # lsblk
 
 # -d deattached
+
 docker run -d --restart unless-stopped \
-  -v "$(pwd)/data":/data \
+  -v "$(pwd)/mounted-data":/data/mbtiles \
+  -v "$(pwd)/src/vector-tiles/data":/data \
   -p 127.0.0.1:8080:8080 \
   maptiler/tileserver-gl:v4.10.3 -p 8080
+
+# TODO(kacper): this needs to be run from home dir.
+# But it should be updated to not care about the current dir.
