@@ -2444,6 +2444,11 @@
           "!in",
           "class",
           "bus"
+        ],
+        [
+          "!in",
+          "class",
+          "parking"
         ]
       ],
       "layout": {
@@ -2508,6 +2513,11 @@
           "!in",
           "class",
           "bus"
+        ],
+        [
+          "!in",
+          "class",
+          "parking"
         ]
       ],
       "layout": {
@@ -2572,6 +2582,11 @@
           "!in",
           "class",
           "bus"
+        ],
+        [
+          "!in",
+          "class",
+          "parking"
         ]
       ],
       "layout": {
