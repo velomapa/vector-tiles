@@ -1,9 +1,16 @@
 #!/bin/bash
 
 # Data is stored inside a mounted volume
-# which is symlinked to the data/output.mbtiles
+# which is symlinked to home dir.
 #
-# ln -s /mnt/XXXX/data/name.mbtiles data/output.mbtiles
+# Data must be named `output.mbtiles`
+#
+# Note: dir and files must be owned by `root``
+# sudo chown -R  root:root DIR
+# sudo chmod -R 755 DIR
+#
+# unlink mounted-data
+# ln -s /mnt/HC_Volume_100222341/data mounted-data
 #
 # To list drives:
 # lsblk
