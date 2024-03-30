@@ -7,7 +7,7 @@
       "url": "mbtiles://output.mbtiles"
     }
   },
-  "sprite": "sprites/osm-liberty",
+  "sprite": "sprites/velomapa",
   "glyphs": "{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -2724,6 +2724,12 @@
           "<=",
           "ref_length",
           6
+        ],
+        [
+          "!in",
+          "trunk",
+          "motorway",
+          "primary"
         ]
       ],
       "layout": {
@@ -2754,6 +2760,114 @@
         "text-rotation-alignment": "viewport",
         "text-size": 10,
         "icon-size": 0.8
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    },
+    {
+      "id": "road_shield_motorway",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "transportation_name",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        [
+          "<=",
+          "ref_length",
+          6
+        ],
+        [
+          "in",
+          "class",
+          "trunk",
+          "motorway"
+        ]
+      ],
+      "layout": {
+        "icon-image": "shield_red_{ref_length}",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              "point"
+            ],
+            [
+              11,
+              "line"
+            ]
+          ]
+        },
+        "symbol-spacing": 500,
+        "text-field": "{ref}",
+        "text-font": [
+          "Noto Sans Medium"
+        ],
+        "text-offset": [
+          0,
+          0.05
+        ],
+        "text-rotation-alignment": "viewport",
+        "text-size": 11,
+        "icon-size": 0.9
+      },
+      "paint": {
+        "text-color": "#ffffff"
+      }
+    },
+    {
+      "id": "road_shield_primary",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "transportation_name",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        [
+          "<=",
+          "ref_length",
+          6
+        ],
+        [
+          "in",
+          "class",
+          "primary"
+        ]
+      ],
+      "layout": {
+        "icon-image": "shield_yellow_{ref_length}",
+        "icon-rotation-alignment": "viewport",
+        "symbol-placement": {
+          "base": 1,
+          "stops": [
+            [
+              10,
+              "point"
+            ],
+            [
+              11,
+              "line"
+            ]
+          ]
+        },
+        "symbol-spacing": 500,
+        "text-field": "{ref}",
+        "text-font": [
+          "Noto Sans Medium"
+        ],
+        "text-offset": [
+          0,
+          0.05
+        ],
+        "text-rotation-alignment": "viewport",
+        "text-size": 11,
+        "icon-size": 0.9
+      },
+      "paint": {
+        "text-color": "#000000"
       }
     },
     {
