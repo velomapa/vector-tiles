@@ -3810,8 +3810,8 @@
           0.1
         ],
         "text-rotation-alignment": "viewport",
-        "text-size": 10,
-        "icon-size": 0.8
+        "text-size": 8,
+        "icon-size": 0.6
       },
       "paint": {
         "text-color": "#000000"
@@ -3865,8 +3865,8 @@
           0.05
         ],
         "text-rotation-alignment": "viewport",
-        "text-size": 10,
-        "icon-size": 0.8
+        "text-size": 8,
+        "icon-size": 0.6
       },
       "paint": {
         "text-color": "#ffffff"
@@ -3918,8 +3918,8 @@
           0.05
         ],
         "text-rotation-alignment": "viewport",
-        "text-size": 10,
-        "icon-size": 0.8
+        "text-size": 8,
+        "icon-size": 0.6
       },
       "paint": {
         "text-color": "#000000"
